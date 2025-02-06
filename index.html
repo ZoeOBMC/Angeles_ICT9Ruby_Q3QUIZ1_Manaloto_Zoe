@@ -1,32 +1,58 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Temperature</title>
-	<style>
-		body { 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Temperature</title>
+    <style>
+        body { 
             background-color: #F0F0F0; 
             font-family: 'Montserrat', sans-serif; 
             color: #333333; 
             text-align: center;
         }
-           button {
-        margin-bottom: 5px;
-        padding: 5px;
-        background-color:#333333; 
-        color: white; 
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-	</style>
+        .container {
+            background-color: #FFFFFF;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+        }
+        h1, h2 {
+            color: #4CAF50;
+        }
+        input {
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: 1px solid #CCCCCC;
+            width: calc(100% - 24px);
+        }
+        button {
+            margin-bottom: 5px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45A049;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #333333;
+        }
+    </style>
 </head>
 <body>
 <div class="container">
         <h1>Celsius</h1>
         <input type="number" id="number1"><br>
-        <h2> Other temperatures:</h2>
+        <h2>Other temperatures:</h2>
         <button onclick="Fahrenheit()" class="button">Fahrenheit</button>
         <button onclick="Kelvin()" class="button">Kelvin</button>
         <div id="result"></div>
@@ -42,9 +68,6 @@
             const ResultSum= num1 + 273.15;
             document.getElementById('result').textContent = `The Result: ${ResultSum}`;
         }
-
-
     </script>
-
 </body>
 </html>
